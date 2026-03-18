@@ -7,16 +7,16 @@ body {
   background-color: #f8fafc;
 }
 
-/* СТИЛИ ВОТЕРМАРКА */
+/* ВОТЕРМАРК */
 .watermark {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(-45deg);
   font-size: 8rem;
-  color: rgba(0, 0, 0, 0.1); /* Очень бледный, чтобы не мешать контенту */
+  color: rgba(0, 0, 0, 0.1);
   font-weight: 900;
-  pointer-events: none; /* Чтобы можно было кликать сквозь него */
+  pointer-events: none;
   white-space: nowrap;
   z-index: 100;
 }
@@ -75,59 +75,90 @@ body {
   display: inline-block;
 }
 
+/* БЛОК ДОВЕРИЯ ЦЕНТРОВКА */
+.trust-item {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column; /* Иконка над текстом */
+  align-items: center; /* Центрируем по горизонтали */
+  text-align: center; /* Текст по центру */
+  gap: 0.75rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f1f5f9;
+}
+
+.icon-trust {
+  font-size: 2.5rem;
+}
+
+.trust-item h3 {
+  font-weight: 800;
+  font-size: 1.15rem;
+  color: #1e293b;
+}
+
+.trust-item p {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+/* ЗАГОЛОВОК УСЛУГ */
 .section-title {
   display: block;
   width: 100%;
   text-align: center !important;
-  font-size: 2rem;
+  font-size: 2.25rem;
   font-weight: 800;
   margin-bottom: 3rem;
   color: #1e293b;
 }
 
+/* КАРТОЧКИ УСЛУГ */
 .service-card {
   background: white;
   padding: 2rem 1rem;
-  border-radius: 1.5rem;
-  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.08);
+  border-radius: 1.75rem;
+  box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  transition: 0.3s;
+  transition: 0.3s ease-out;
   border: 1px solid #f1f5f9;
 }
 
 .service-card:hover {
   transform: translateY(-8px);
   border-color: #3b82f6;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 }
 
 .icon-box {
-  font-size: 2.5rem;
+  font-size: 2.75rem;
   margin-bottom: 0.5rem;
 }
 .service-card span {
-  font-weight: 700;
+  font-weight: 800;
   color: #1e293b;
+  font-size: 0.95rem;
+  line-height: 1.2;
 }
 
-.trust-item {
-  background: white;
-  padding: 1.25rem;
-  border-radius: 1.25rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03);
-}
-
+/* ФОРМА */
 .form-input {
   width: 100%;
-  padding: 1.1rem;
+  padding: 1.15rem;
   background-color: #f1f5f9;
   border-radius: 1rem;
   border: 2px solid transparent;
+  font-weight: 500;
+}
+.form-input:focus {
+  border-color: #3b82f6;
+  background-color: white;
+  outline: none;
 }
 
 .btn-animate {
