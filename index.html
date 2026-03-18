@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="bg-gray-50 text-gray-900">
+    <div class="watermark">ДЕМО-САЙТ</div>
+
     <div class="fixed bottom-4 right-4 z-50 md:hidden">
       <a
         href="tel:+79000000000"
@@ -43,11 +45,12 @@
         <div class="logo">KZN-Сантехник</div>
         <a
           href="tel:+79000000000"
-          class="hidden md:block font-bold text-lg text-gray-800 hover:text-blue-600 tracking-tight"
+          class="hidden md:block font-bold text-lg text-gray-800 tracking-tight"
+          >+7 (9XX) XXX-XX-XX</a
         >
-          +7 (9XX) XXX-XX-XX
-        </a>
-        <a href="https://wa.me/79000000000" class="wa-button"> WhatsApp </a>
+        <a href="https://wa.me/79000000000" class="wa-button text-white"
+          >WhatsApp</a
+        >
       </div>
     </header>
 
@@ -63,32 +66,34 @@
           24/7 без выходных. Гарантия 1 год.
         </p>
         <div class="flex justify-center">
-          <a href="#lead-form" class="cta-button"> ВЫЗВАТЬ МАСТЕРА </a>
+          <a href="#lead-form" id="scroll-btn" class="cta-button"
+            >ВЫЗВАТЬ МАСТЕРА</a
+          >
         </div>
       </div>
     </section>
 
-    <section class="py-12 bg-white px-4">
+    <section class="py-12 bg-white px-4 text-center">
       <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
         <div class="trust-item">
           <div class="icon">🚀</div>
           <div>
             <h3>Срочный выезд</h3>
-            <p>Буду у вас в течение часа в любой точке Казани.</p>
+            <p>Буду у вас в течение часа.</p>
           </div>
         </div>
         <div class="trust-item">
           <div class="icon">🛡️</div>
           <div>
             <h3>Гарантия качества</h3>
-            <p>Официальная гарантия на все работы по договору.</p>
+            <p>Официальная гарантия по договору.</p>
           </div>
         </div>
         <div class="trust-item">
           <div class="icon">💰</div>
           <div>
             <h3>Честная цена</h3>
-            <p>Стоимость называю до начала работ. Без скрытых доплат.</p>
+            <p>Называем стоимость до начала работ.</p>
           </div>
         </div>
       </div>
@@ -126,13 +131,19 @@
       </div>
     </section>
 
-    <section id="lead-form" class="py-16 px-4 gradient-blue scroll-mt-20">
+    <section id="lead-form" class="py-16 px-4 gradient-blue scroll-mt-24">
       <div
         class="max-w-xl mx-auto bg-white rounded-3xl p-8 shadow-2xl text-gray-900"
       >
-        <h2 class="text-2xl font-bold text-center mb-6">
-          Нужна помощь прямо сейчас?
+        <h2
+          class="text-2xl font-bold text-center mb-6 text-red-600 uppercase tracking-tighter"
+        >
+          [ ДЕМО-РЕЖИМ ]
         </h2>
+        <p class="text-center text-sm text-gray-500 mb-6">
+          Данный сайт предоставлен для ознакомления. Для активации кнопок и
+          привязки вашего номера свяжитесь с разработчиком.
+        </p>
         <form class="space-y-4" onsubmit="return false;">
           <input type="text" placeholder="Ваше имя" class="form-input" />
           <input
@@ -140,7 +151,10 @@
             placeholder="+7 (___) ___-__-__"
             class="form-input"
           />
-          <button type="submit" class="cta-button w-full">
+          <button
+            type="submit"
+            class="cta-button w-full opacity-50 cursor-not-allowed"
+          >
             ПЕРЕЗВОНИТЕ МНЕ
           </button>
         </form>
@@ -152,15 +166,25 @@
           </p>
           <a
             href="tel:+79000000000"
-            class="text-2xl font-extrabold text-blue-600 hover:underline"
+            class="text-2xl font-extrabold text-blue-600"
             >+7 (9XX) XXX-XX-XX</a
           >
         </div>
       </div>
     </section>
 
-    <footer class="py-8 text-center text-gray-400 text-xs">
-      &copy; 2026 Профессиональный Сантехник Казани.
+    <footer class="py-8 text-center text-gray-400 text-xs italic">
+      Сайт находится в демонстрационном режиме. Разработка: @ctdlww
     </footer>
+
+    <script>
+      document
+        .getElementById("scroll-btn")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+    </script>
   </body>
 </html>
