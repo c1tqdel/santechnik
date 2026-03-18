@@ -1,0 +1,163 @@
+/* Основные настройки */
+body {
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+  background-color: #f8fafc; /* Чуть более мягкий серый для контраста с белыми карточками */
+}
+
+/* Градиентный фон */
+.gradient-blue {
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+}
+
+/* Логотип */
+.logo {
+  font-weight: 800;
+  color: #2563eb;
+  font-size: 1.25rem;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+}
+
+/* Кнопка WhatsApp */
+.wa-button {
+  background-color: #22c55e;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  box-shadow: 0 4px 6px -1px rgba(34, 197, 94, 0.2);
+  transition: all 0.3s ease;
+}
+
+/* Главный заголовок */
+.hero-title {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.02em;
+}
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 3.5rem;
+  }
+}
+
+.hero-subtitle {
+  font-size: 1.125rem;
+  opacity: 0.95;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Кнопка ВЫЗВАТЬ МАСТЕРА */
+.cta-button {
+  background-color: #f97316;
+  color: white;
+  font-weight: 800;
+  font-size: 1.25rem;
+  padding: 1.25rem 2.5rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 20px 25px -5px rgba(249, 115, 22, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-block;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 25px 30px -5px rgba(249, 115, 22, 0.4);
+}
+.cta-button:active {
+  transform: scale(0.95);
+}
+
+/* Блок доверия */
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: white;
+  padding: 1.25rem;
+  border-radius: 1.25rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+/* СЕКЦИЯ УСЛУГ (Те самые карточки) */
+.service-card {
+  background: white;
+  padding: 1.75rem 1rem;
+  border-radius: 1.5rem; /* Закругленные углы */
+  border: 1px solid #ffffff; /* Белая обводка */
+  font-weight: 700;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.75rem;
+
+  /* Тень, создающая эффект возвышения */
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.07),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Эффект при наведении на карточку */
+.service-card:hover {
+  transform: translateY(-8px); /* Сильнее приподнимается */
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border-color: #3b82f6; /* Обводка становится синей */
+}
+
+.service-card span {
+  color: #1e293b;
+  line-height: 1.3;
+}
+
+/* Иконки внутри карточек */
+.service-card .icon-box {
+  font-size: 2.5rem;
+  margin-bottom: 0.25rem;
+}
+
+/* Форма */
+.form-input {
+  width: 100%;
+  padding: 1.1rem;
+  background-color: #f1f5f9;
+  border-radius: 1rem;
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+}
+.form-input:focus {
+  border-color: #3b82f6;
+  background-color: white;
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+}
+
+/* Анимация кнопки звонка */
+.btn-animate {
+  animation: bounce 2s infinite;
+}
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-12px) scale(1.05);
+  }
+}
